@@ -52,12 +52,12 @@ def generate_sql_inserts(num_products, num_customers, num_dates, num_sales):
 num_products = 100
 num_customers = 200
 num_dates = 365
-num_sales = 1000
+num_sales = 3000
 
 sql_script = generate_sql_inserts(num_products, num_customers, num_dates, num_sales)
 
 # Save to a file
-with open("star_schema_data.sql", "w") as f:
+with open("sql/star_schema_data.sql", "w") as f:
     f.write(sql_script)
 
 print("SQL file generated successfully: star_schema_data.sql")
