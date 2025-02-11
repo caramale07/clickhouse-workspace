@@ -1,1 +1,18 @@
+insert 3k rows - 2m 7s ; 1m 59s ; 2m 2s
+
+select1 - 0.042s
+select2 - 0.027s
+select3 - 0.007s
+select4 - 0.067s
+select5 - 0.018s
+
+
+
+insert 1k rows - 1m 8s
 insert 3k rows - 2m 7s
+insert 17k rows - 9m 58s
+
+insert 1 million rows of data in csv format -> 14s
+insert 200,000 rows of data in csv format -> 3s
+
+

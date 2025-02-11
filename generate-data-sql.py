@@ -49,10 +49,10 @@ def generate_sql_inserts(num_products, num_customers, num_dates, num_sales):
     return "\n".join(sql_statements)
 
 # Example: Adjust the number of rows as needed
-num_products = 100
-num_customers = 200
-num_dates = 365
-num_sales = 3000
+num_products = 100000
+num_customers = 200000
+num_dates = 3650
+num_sales = 1000000
 
 sql_script = generate_sql_inserts(num_products, num_customers, num_dates, num_sales)
 
