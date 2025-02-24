@@ -31,3 +31,27 @@ CREATE TABLE `default`.sales (
     total_amount Float32
 ) ENGINE = MergeTree()
 ORDER BY (date_id, sale_id);
+
+-- 
+
+CREATE TABLE `default`.sales (
+    sale_id UInt32,
+    product_id UInt32,
+    customer_id UInt32,
+    date_id Date,
+    quantity SimpleAggregateFunction(sum, UInt32), 
+    total_amount SimpleAggregateFunction(sum, Float32)
+) ENGINE = AggregatingMergeTree()
+ORDER BY (date_id, sale_id);
+
+
+CREATE TABLE `default`.sales (
+    sale_id UInt32,
+    product_id UInt32,
+    customer_id UInt32,
+    date_id Date,
+    quantity UInt32,
+    total_amount Float32
+) ENGINE = Log;
+
+
